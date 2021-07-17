@@ -1,0 +1,9 @@
+.DS_store
+node_modules/
+.npm
+.eslintcache
+.env
+.env.test
+dist/
+
+app.dev.yaml
