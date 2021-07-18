@@ -15,7 +15,7 @@ class App {
 
   constructor(routes: Route[]) {
     this.app = express();
-    this.port = process.env.PORT || 3000;
+    this.port = process.env.PORT || 8000;
     App.initializeSequelize();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);

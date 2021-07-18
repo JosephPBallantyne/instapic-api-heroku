@@ -11,7 +11,7 @@ export const sequelize = new Sequelize(
   {
     host: process.env.POSTGRES_INSTANCE,
     dialect: 'postgres',
-    logging: true,
+    logging: false,
     pool: {
       min: 0,
       max: 30,
