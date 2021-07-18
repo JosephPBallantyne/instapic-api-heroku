@@ -18,7 +18,7 @@ class ServerConfigImpl implements ServerConfig {
 
   constructor() {
     this.env = process.env.NODE_ENV || 'local';
-    this.port = (process.env.PORT as any as number) || 3000;
+    this.port = (process.env.PORT as any as number) || 5000;
     this.dbHost = process.env.POSTGRES_HOST || '';
     this.dbName = process.env.POSTGRES_DATABASE || '';
     this.dbUser = process.env.POSTGRES_USER || '';

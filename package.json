@@ -13,7 +13,7 @@
     "build-ts": "tsc",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "serve": "node dist/server.js",
-    "start": "NODE_ENV=local npm run serve",
+    "start": "npm run serve",
     "watch": "nodemon dist/server.js",
     "deploy": "gcloud app deploy app.dev.yaml -v=01",
     "test": "jest"
