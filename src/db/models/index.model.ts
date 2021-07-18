@@ -9,7 +9,7 @@ export const sequelize = new Sequelize(
   process.env.POSTGRES_USER,
   process.env.POSTGRES_PASSWORD,
   {
-    host: process.env.POSTGRES_INSTANCE,
+    host: process.env.HOST,
     dialect: 'postgres',
     logging: false,
     pool: {
