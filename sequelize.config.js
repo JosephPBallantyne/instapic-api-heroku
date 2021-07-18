@@ -3,8 +3,14 @@ let config = {
     username: '',
     database: '',
     password: '',
-    host: 'localhost',
+    host: '',
     dialect: 'postgres',
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false,
+      },
+    },
   },
   production: {
     username: process.env.POSTGRES_USER,

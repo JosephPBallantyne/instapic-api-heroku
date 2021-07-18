@@ -4,29 +4,10 @@ import Images from './images.model';
 
 console.info('Initializing sequelize...');
 
-// export const sequelize = new Sequelize(
-//   process.env.POSTGRES_DATABASE,
-//   process.env.POSTGRES_USER,
-//   process.env.POSTGRES_PASSWORD,
-//   {
-//     host: process.env.HOST,
-//     dialect: 'postgres',
-//     logging: false,
-//     pool: {
-//       min: 0,
-//       max: 30,
-//       idle: 10000,
-//       acquire: 30000,
-//     },
-//     // dialectOptions: {
-//     //   socketPath: process.env.POSTGRES_INSTANCE,
-//     // },
-//   }
-// );
-
 export const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   protocol: 'postgres',
+  ssl: true,
   dialectOptions: {
     ssl: {
       require: true,
