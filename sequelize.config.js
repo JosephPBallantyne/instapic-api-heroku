@@ -6,7 +6,7 @@ let config = {
     host: 'localhost',
     dialect: 'postgres',
   },
-  development: {
+  production: {
     username: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
     database: process.env.POSTGRES_DATABASE,
@@ -17,8 +17,8 @@ let config = {
 
 if (process.env.NODE_ENV === 'local') {
   config = config.local;
-} else if (process.env.NODE_ENV === 'development') {
-  config = config.development;
+} else if (process.env.NODE_ENV === 'production') {
+  config = config.production;
 } else {
   config = config.local;
 }
